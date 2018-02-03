@@ -1,0 +1,34 @@
+.title {
+  &:after {
+      left: 50%;
+      transform: translateX(-50%);
+      content: '';
+      bottom: 25%;
+      width: 47px;
+      height: 5px;
+    }
+  &-small {
+    text-align: center;
+    font-size: 24px;
+    font-family: $ff-main;
+  }
+  &-big {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $ff-main-bold;
+    font-size: 30px;
+  }
+  &-with-bottom-line {
+    position: relative;
+    &:after {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      content: '';
+      bottom: -45%;
+      width: $line-width;
+      height: $line-height;
+      background: $line-color;
+    }
+  }
+}

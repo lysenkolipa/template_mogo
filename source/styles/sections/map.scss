@@ -1,0 +1,44 @@
+.map {
+  background: $main-color url('../images/map-bg.png') center/cover no-repeat;
+  height: 200px;
+  position: relative;
+  display: flex;
+  &:after {
+    content: '';
+    background: url(../images/rectangle-27.svg);
+    opacity: 0.4;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+  }
+  &-block {
+    display: flex;
+    flex-direction: column;
+    &_img {
+      text-align: center;
+      padding-top: 4%;
+    }
+    &_text {
+      text-transform: uppercase;
+      font-size: 24px;
+      color: $line-color;
+      text-align: center;
+      position: relative;
+      &:after {
+        position: absolute;
+        transform: translateX(-50%);
+        content: '';
+        bottom: -80%;
+        left: 50%;
+        width: $line-width;
+        height: $line-height;
+        background: $line-color;
+      }
+    }
+  }
+}

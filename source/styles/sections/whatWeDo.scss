@@ -1,0 +1,184 @@
+.what-we-do {
+  padding-top: 5%;
+  &_slider-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 5%;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      right: -12%;
+      top: 60%;
+      border-right: 3px solid #cccccc;
+      border-bottom: 3px solid #cccccc;
+      transform: rotate(-45deg);
+      width: 18px;
+      height: 18px;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: -10%;
+      top: 60%;
+      border-right: 3px solid #cccccc;
+      border-bottom: 3px solid #cccccc;
+      transform: rotate(135deg);
+      width: 18px;
+      height: 18px;
+    }
+    &_block {
+      width: 200px;
+      height:150px;
+      border: 2px solid $third-main-color;
+      margin-right: 5%;
+      position: relative;
+      &-img {
+        width: 63px;
+        height: 61px;
+        position: absolute;
+        top:30%;
+        left: 25%;
+        padding: 0;
+      }
+    }
+  }
+  &_text {
+    font-family:$ff-main-reg;
+    text-align: center;
+    font-size: 15px;
+    line-height: 24px;
+    padding: 5% 0 5% 0;
+
+  }
+  &_container {
+    display: flex;
+    width: 100%;
+    height: 380px;
+    margin-bottom: 120px;
+    //background: #95e1d3;
+    &_img {
+     width: 50%;
+      .what-we-do_img {
+        width: 570px;
+        height: 380px;
+        text-align: center;
+      }
+    }
+  }
+  &_accordion {
+    width: 50%;
+    padding:2%;
+    &_item {
+      position: relative;
+      width: 100%;
+      color: $second-main-color;
+      overflow: hidden;
+      margin-bottom: 2%;
+      &-tab-content {
+        max-height: 0;
+        overflow: hidden;
+        border: 1px solid #cccccc;
+        border-top: unset;
+        transition: max-height .35s;
+        font-size: 15px;
+        line-height: 24px;
+        color: #999999;
+        overflow-y: scroll;
+        &_text {
+          margin: 1em;
+        }
+      }
+      &-label-1, &-label-2, &-label-3 {
+        position: relative;
+        display: block;
+        padding: 0 0 0 3em;
+        border: 1px solid #cccccc;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-family:$ff-main-reg;
+        line-height: 3;
+        cursor: pointer;
+        height: 60px;
+        &::after {
+          position: absolute;
+          right: 0;
+          top: 0;
+          display: block;
+          width: 3em;
+          height: 3em;
+          line-height: 3;
+          text-align: center;
+          transition: all .35s;
+        }
+      }
+      &-label-1:before,
+      &-label-2:before,
+      &-label-3:before {
+          content:'';
+          display: block;
+          background-size: 28px 28px;
+          height: 28px;
+          width: 28px;
+          position: absolute;
+          left: 1%;
+          top: 15%;
+      }
+      &-label-1:before { background-image: url('../images/picture (1).svg'); }
+      &-label-2:before { background-image: url('../images/equalizer.svg'); }
+      &-label-3:before { background-image: url('../images/bullseye.svg'); }
+
+      input {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+      }
+    }
+    input:checked ~ .what-we-do_accordion_item-tab-content {
+      max-height: 10em;
+    }
+    [type = radio] + label::after {
+      content: "";
+      position: absolute;
+      right: 2%;
+      top: 25%;
+      border-right: 3px solid #cccccc;
+      border-bottom: 3px solid #cccccc;
+      transform: rotate(45deg);
+      width: 18px;
+      height: 18px;
+    }
+    [type = radio]:checked + label::after {
+      transform: rotate(225deg);
+      top: 35%;
+    }
+  }
+  &_slider {
+    width: 100%;
+    height: 290px;
+    background:#f8f8f8;
+    &-list_block {
+      margin: 0;
+    }
+    &-list_author {
+      position: relative;
+      font-family: $ff-main;
+      font-size: 24px;
+      text-align: left;
+      padding: 5% 0 0 10%;
+      &:before {
+        position: absolute;
+        transform: translateX(-50%);
+        content: '';
+        bottom: 20%;
+        left: 5%;
+        width: 60px;
+        height: 3px;
+        background: #f38181;
+      }
+    }
+  }
+}
+
+

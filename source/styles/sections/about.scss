@@ -1,0 +1,91 @@
+.about {
+  padding: 5% 0 5% 0;
+  &-text {
+    font:$ff-main-reg;
+    text-align: center;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #999999;
+    padding-top: $padding-after-title;
+  }
+  &-images {
+    padding: 100px 0 100px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    &_list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+    }
+    .tile {
+      overflow: hidden;
+      position: relative;
+      &:hover {
+        box-shadow: 10px 10px 5px 0px rgba(149,225,211,1);
+        .tile-content {
+          top: 0;
+          left: 0;
+        }
+      }
+      .tile-content {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(#ef928a, #ead383);
+        opacity: .9;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .about-images_hover-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: #ffffff;
+        font: $ff-main-bold;
+        text-transform: uppercase;
+      }
+      .about-images_list_img {
+        width: 100%;
+      }
+    }
+  }
+
+  &-bottom {
+    background: $third-main-color;
+    &_list {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+
+    }
+    &_item {
+      border-right: .2px solid $main-color;
+      text-align: center;
+      //padding: 0 5% 5% 5%;
+      width:(1200px/5);
+      height: 270px;
+
+      &:first-child {
+        border-left: 1px solid $main-color;
+      }
+      &-number {
+        font-size: 72px;
+        font-family: $ff-main-bold, 'Arial';
+        font-weight: 700;
+        color: $main-color;
+        margin-bottom: 0;
+      }
+      &-text {
+        font-size: 14px;
+        font-family: $ff-main-bold, 'Arial';
+        font-weight: 400;
+        color: $main-color;
+      }
+    }
+  }
+}

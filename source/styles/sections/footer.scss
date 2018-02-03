@@ -1,0 +1,91 @@
+.footer {
+  padding-top: 5%;
+  background: #f8f8f8;
+  &-block {
+    display: flex;
+    justify-content: space-around;
+    //background: #95e1d3;
+    width: 100%;
+    &_subscribe {
+      width: 40%;
+      padding: 5%;
+      //background: orange;
+      &-list {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 0;
+      }
+      &_text {
+        font-size: 15px;
+        color: #999999;
+        font: $ff-main-reg;
+        &-followers {
+          margin-top: 10%;
+          &_number {
+            margin-right: 3px;
+            font: $ff-main-second;
+            color: #333333;
+            font-size: 18px;
+            font-weight: 700;
+          }
+          &_text {
+            font-family: $ff-main-second;
+            color: #333333;
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+      }
+      &-input {
+        display: flex;
+        &_area {
+          width:230px;
+          height:40px;
+        }
+        &_btn {
+          background:$third-main-color;
+          color:$main-color;
+          text-transform: uppercase;
+          font-size: 14px;
+          border-color: #95e1d3;
+          width: 150px;
+          height: 40px;
+        }
+      }
+    }
+    &_blogs {
+      width:30%;
+      padding-top: 1%;
+      //background: yellow;
+      &-list { padding-left: 0; }
+      &-item {
+        display: flex;
+        padding-bottom: 7%;
+        &_list { padding-left: 5%; }
+      }
+    }
+    &_instagram {
+      width: 30%;
+      padding: 1%;
+      &-section {
+        &_img {
+          margin-right: 1%;
+        }
+      }
+    }
+  }
+}
+
+.text-1 {
+  font-size: 12px;
+  font-family: $ff-main-second;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #333333;
+}
+.text-2 {
+  font-size: 13px;
+  font-family: $ff-main-light;
+  font-weight: 400;
+  color: #999999;
+}

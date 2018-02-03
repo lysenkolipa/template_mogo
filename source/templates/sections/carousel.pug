@@ -1,0 +1,28 @@
+.carousel-container
+    .carousel.my-carousel.carousel--translate
+        input.carousel__activator(type="radio" name="carousel" id="F" checked="checked")
+        input.carousel__activator(type="radio" name="carousel" id="G")
+        input.carousel__activator(type="radio" name="carousel" id="H")
+        .carousel__controls
+            label.carousel__control.carousel__control--backward(for="F")
+            label.carousel__control.carousel__control--forward(for="H")
+        .carousel__controls
+            label.carousel__control.carousel__control--backward(for="F")
+            label.carousel__control.carousel__control--forward(for="G")
+        .carousel__controls
+            label.carousel__control.carousel__control--backward(for="G")
+            label.carousel__control.carousel__control--forward(for="H")
+        .carousel__track
+            .carousel__slide
+                h1 “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    |ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+            .carousel__slide
+                h1 “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    | ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+            .carousel__slide
+                h1 “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    | ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+        .carousel__indicators
+        label.carousel__indicator(for="F")
+        label.carousel__indicator(for="G")
+        label.carousel__indicator(for="H")

@@ -1,0 +1,66 @@
+.clients {
+  background: $main-color url('../images/layer-53.png') center/cover no-repeat;
+  padding: 5% 0 5% 0;
+  &-title-1 {
+    font-size: 14px;
+    font-family: $ff-main-second;
+    text-transform: uppercase;
+    color: $second-main-color;
+    text-align: left;
+  }
+  &-title-2 {
+    font-size: 15px;
+    font-family:$ff-main-light, 'Verdana';
+    text-transform: capitalize;
+    text-align: left;
+    position: relative;
+    &:after {
+      position: absolute;
+      left: 10%;
+      transform: translateX(-50%);
+      content: '';
+      bottom: -45%;
+      width: 60px;
+      height: 3px;
+      background: #f38181;
+    }
+  }
+  &-block {
+    padding-top: 10%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &_img {
+      width: 110px;
+      height: 110px;
+      margin-right: 10%;
+    }
+  }
+  &-block-1,
+  &-block-2,
+  &-block-3,
+  &-block-4  {
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+    margin: 2%;
+
+  }
+  //&-block-1 {
+  //  background: yellow;
+  //}
+  //&-block-2 {
+  //  background: deeppink;
+  //}
+  //&-block-3 {
+  //  background: aqua;
+  //}
+  //&-block-4 {
+  //  background: orange;
+  //}
+  &_info-text {
+    font-size: 15px;
+    font:$ff-main-reg;
+    color:#999999;
+  }
+}

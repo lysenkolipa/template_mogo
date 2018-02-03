@@ -1,0 +1,177 @@
+
+.header {
+  width: 100%;
+  height: 1000px;
+  background: url('../images/header-bg.png');
+  padding-top: 2%;
+  position: relative;
+  &:after {
+    content: '';
+    background: url(../images/bg-cover.svg);
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  &-logo {
+    z-index: 2;
+    font: $ff-main-bold;
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 700;
+
+  }
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 1%;
+      padding-right: 1%;
+      z-index: 2;
+
+      &_nav {
+        display: flex;
+        justify-content: space-around;
+        z-index: 2;
+        //background: #000;
+        width: $menu-nav-width;
+        &_item {
+          text-decoration: none;
+          color: $main-color;
+          font-family: 'Montserrat-Regular', 'Verdana';
+          font-weight: 400;
+          font-size: 14px;
+          position: relative;
+          &:first-child { padding-left: 0; }
+          &:hover {
+            color: #ffeb3b;
+          }
+          &:after{
+            background-color: #ffeb3b;
+            display: block;
+            content: "";
+            height: 2px;
+            width: 0%;
+            left:50%;
+            position:absolute;
+            transition: width .3s ease-in-out;
+            transform:translateX(-50%);
+          }
+          &:hover:after,
+          &:focus:after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  .shopping-cart:hover,
+  .search:hover {
+    color: unset;
+  }
+  .shopping-cart:after,
+  .search:after {
+    background-color: unset;
+  }
+    &-center {
+      display: flex;
+      flex-direction:column;
+      justify-content: space-around;
+      width: 100%;
+      padding-left: 10%;
+      padding-right: 10%;
+      margin-top: 10%;
+      z-index: 2;
+      &_top-text-1 {
+        z-index: 2;
+        font-family: $ff-main;
+        font-size: 72px;
+        font-weight: 400;
+        color: $main-color;
+        text-align: center;
+      }
+      &_big-text-2 {
+        font-family: $ff-main-bold, 'Arial';
+        font-size: 150px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $main-color;
+        line-height: 140px;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 5%;
+        z-index: 2;
+        position: relative;
+        &:after {
+          content:'';
+          position: absolute;
+          left: 50%;
+          bottom:-17%;
+          transform: translateX(-50%);
+          width: $line-width;
+          height: $line-height;
+          background:$main-color;
+        }
+      }
+      &_btn-container {
+        display: flex;
+        justify-content: center;
+        padding: 5%;
+      }
+
+      .white-border {
+        @include btn-white-border(#ffffff, $third-main-color, 3px, bottom, right);
+      }
+      .btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        //line-height: 1.5;
+        font-size:14px;
+        font: $ff-main-bold;
+        padding: 1em 2em;
+        letter-spacing: 0.05rem;
+        z-index: 2;
+        text-transform: uppercase;
+        width:160px;
+        height:40px;
+        position: relative;
+
+
+
+        &:focus { outline: 1px  #55d7dc; }
+      }
+    }
+    &-bottom {
+      padding-top: 100px;
+      &_nav {
+        display: flex;
+        justify-content: space-between;
+        &_item {
+          text-decoration: none;
+          font-family: $ff-main-reg;
+          color: $main-color;
+          z-index: 2;
+          position: relative;
+          &:before {
+            content:'';
+            position: absolute;
+            left: 80%;
+            top:-100%;
+            transform: translateX(-50%);
+            width: 280px;
+            height: 3px;
+            background:$main-color;
+          }
+          &-number {
+            font-size: 24px;
+            font-weight: 700;
+            font: $ff-main-second;
+            padding-right: 10%;
+          }
+        }
+      }
+    }
+
+  }

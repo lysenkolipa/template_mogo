@@ -1,0 +1,139 @@
+.someOurWork {
+  padding-top: 5%;
+  &-text {
+    font-family:$ff-main-reg;
+    text-align: center;
+    font-size: 15px;
+    line-height: 24px;
+    padding: 5% 0 5% 0;
+  }
+  &-img_block {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin:0;
+    padding:0;
+
+    .block-1,
+    .block-2,
+    .block-3,
+    .block-4 {
+      width: 50%;
+      height: 50%;
+    }
+    .block-5 {
+      width: 100%;
+      height: 100%;
+    }
+    .block-6,
+    .block-7 {
+      width: 100%;
+      height: 50%;
+    }
+    .section-left,
+    .section-right {
+      width: 50%;
+    }
+    .section-left {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .section-right {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      &-block_left {
+        width: 50%;
+      }
+      &-block_right {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    }
+    .a,.b,.c,.d,.e,.f,.g {
+      width: 100%;
+      height: 100%;
+    }
+    .tile {
+      overflow: hidden;
+      position: relative;
+      &:hover {
+        .tile-content {
+          top: 0;
+          left: 0;
+        }
+      }
+      .tile-content {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(#ef928a, #ead383);
+        opacity: .9;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .about-images_hover-title {
+        font-size: 18px;
+        font-weight: 400;
+        color: #ffffff;
+        font: $ff-main-reg;
+        text-transform: uppercase;
+      }
+      .about-images_hover-text {
+        font-size: 15px;
+        font-weight: 400;
+        color: #ffffff;
+        font: $ff-main-light;
+        line-height: 24px;
+      }
+      .about-images_list_img {
+        width: 100%;
+      }
+    }
+
+
+  }
+  &_slider {
+    width: 100%;
+    height: 350px;
+
+    &-list_block {
+      margin: 0;
+      &-img {
+        width: 210px;
+        height: 210px;
+      }
+    }
+    &-list_author {
+      position: relative;
+      font-family: $ff-main;
+      font-size: 24px;
+      text-align: left;
+      padding: 5% 0 0 10%;
+      &:before {
+        position: absolute;
+        transform: translateX(-50%);
+        content: '';
+        bottom: 20%;
+        left: 5%;
+        width: 60px;
+        height: 3px;
+        background: #f38181;
+      }
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+
+}
